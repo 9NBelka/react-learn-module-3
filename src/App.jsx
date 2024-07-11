@@ -5,7 +5,7 @@ function App() {
       e.preventDefault();
       console.log(e.target.elements.username.value);
       console.log(e.target.elements.role.value);
-
+      e.target.reset();
     }
   return (
     <>
