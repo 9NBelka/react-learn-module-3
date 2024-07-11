@@ -2,6 +2,7 @@ import { useState } from "react";
 import UserForm from "./components/UserForm/UserForm"
 import TextInput from "./components/TextInput/TextInput";
 import LangSwitcher from "./components/LangSwitcher/LangSwitcher";
+import Formd from "./components/Form/Form";
 
 function App() {
 
@@ -34,6 +35,10 @@ function App() {
 
       <LangSwitcher lang={lang} onSelect={setLang}/>
       <p>Current lang: {lang}</p>
+
+      <hr />
+
+      <Formd />
     </>
   )
 }
