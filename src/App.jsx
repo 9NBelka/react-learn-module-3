@@ -3,6 +3,7 @@ import UserForm from "./components/UserForm/UserForm"
 import TextInput from "./components/TextInput/TextInput";
 import LangSwitcher from "./components/LangSwitcher/LangSwitcher";
 import Formd from "./components/Form/Form";
+import FormClothes from "./components/FormClothes/FormClothes";
 
 function App() {
 
@@ -39,6 +40,10 @@ function App() {
       <hr />
 
       <Formd />
+
+      <hr />
+
+      <FormClothes />
     </>
   )
 }
