@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UserForm from "./components/UserForm/UserForm"
+import TextInput from "./TextInput/TextInput";
 
 function App() {
 
@@ -23,8 +24,8 @@ function App() {
       <UserForm onSave={saveUsername}/>
 
       <hr />
-      <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
-
+     
+      <TextInput value={text} onChange={setText}/>
       <p>{text}</p>
     </>
   )
