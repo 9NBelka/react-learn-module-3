@@ -1,24 +1,24 @@
+import { useState } from "react";
+import UserForm from "./components/UserForm/UserForm"
 
 function App() {
 
-    const handleUsername = (e) => {
-      e.preventDefault();
-      console.log(e.target.elements.username.value);
-      console.log(e.target.elements.role.value);
-      e.target.reset();
-    }
+  const [user, setUser] = useState(null);
+
+  const saveUsername = (user) => {
+      console.log(user);
+      setUser(user);
+  }
+    
   return (
     <>
-      <form onSubmit={handleUsername}>
-        <input type="text" name="username"></input>
-        <select name="role">
-          <option value="guest">guest</option>
-          <option value="admin">admin</option>
-          <option value="user">user</option>
-
-        </select>
-        <button type="submit">Submit</button>
-      </form>
+      {user && 
+      <div>
+        <p>{user.username}</p>
+        <p>{user.role}</p>
+      </div>
+      }
+      <UserForm onSave={saveUsername}/>
     </>
   )
 }
