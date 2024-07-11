@@ -18,6 +18,7 @@ function App() {
     
   return (
     <>
+      <h2>НЕКонтролируемая форма:</h2>
       {user && 
       <div>
         <p>{user.username}</p>
@@ -37,6 +38,8 @@ function App() {
       <LangSwitcher lang={lang} onSelect={setLang}/>
       <p>Current lang: {lang}</p>
 
+      <hr />
+      <h2>Контролируемая форма:</h2>
       <hr />
 
       <Formd />
