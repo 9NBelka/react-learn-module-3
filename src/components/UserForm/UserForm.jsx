@@ -1,4 +1,9 @@
+import { useId } from "react";
+
 const UserForm = ({onSave}) =>{
+
+    const usernameFieldId = useId();
+    const roleFieldId = useId();
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -14,13 +19,20 @@ const UserForm = ({onSave}) =>{
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="username"></input>
-        <select name="role">
-          <option value="guest">guest</option>
-          <option value="admin">admin</option>
-          <option value="user">user</option>
+        <div>
+          <label htmlFor={usernameFieldId}>Username:</label>
+          <input type="text" name="username" id={usernameFieldId}></input>
 
-        </select>
+        </div>
+        <div>
+          <label htmlFor={roleFieldId}>Role:</label>
+          <select name="role" id={roleFieldId}>
+            <option value="guest">guest</option>
+            <option value="admin">admin</option>
+            <option value="user">user</option>
+          </select>
+        </div>
+        
         <button type="submit">Submit</button>
       </form>
     </>
