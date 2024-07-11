@@ -1,11 +1,13 @@
 import { useState } from "react";
 import UserForm from "./components/UserForm/UserForm"
-import TextInput from "./TextInput/TextInput";
+import TextInput from "./components/TextInput/TextInput";
+import LangSwitcher from "./components/LangSwitcher/LangSwitcher";
 
 function App() {
 
   const [user, setUser] = useState(null);
   const [text, setText] = useState("qwerty")
+  const [lang, setLang] = useState("en")
 
   const saveUsername = (user) => {
       console.log(user);
@@ -27,6 +29,11 @@ function App() {
      
       <TextInput value={text} onChange={setText}/>
       <p>{text}</p>
+
+      <hr />
+
+      <LangSwitcher lang={lang} onSelect={setLang}/>
+      <p>Current lang: {lang}</p>
     </>
   )
 }
