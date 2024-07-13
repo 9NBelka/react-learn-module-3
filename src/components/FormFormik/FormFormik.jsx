@@ -28,6 +28,7 @@ const FormFormik = ({onDoHandleSubmit}) => {
           <label htmlFor={emailFieldId}>Email:</label>
           <Field type="email" name="email" id={emailFieldId} />
         </div>
+        <Field as="textarea"/>
         <div>
           <label htmlFor={roleFieldId}>Role:</label>
           <Field as="select" name="role" id={roleFieldId}>
