@@ -12,7 +12,8 @@ const FormFormik = ({onDoHandleSubmit}) => {
   return (
     <Formik initialValues={{
       username: "",
-      email: ""
+      email: "",
+      role: "user"
     }} onSubmit={(value, actions) => {
       // console.log(value);
       onDoHandleSubmit(value);
@@ -27,14 +28,14 @@ const FormFormik = ({onDoHandleSubmit}) => {
           <label htmlFor={emailFieldId}>Email:</label>
           <Field type="email" name="email" id={emailFieldId} />
         </div>
-        {/* <div>
+        <div>
           <label htmlFor={roleFieldId}>Role:</label>
-          <select name="role" id={roleFieldId}>
+          <Field as="select" name="role" id={roleFieldId}>
             <option value="guest">guest</option>
             <option value="admin">admin</option>
             <option value="user">user</option>
-          </select>
-        </div> */}
+          </Field>
+        </div>
         <button type="submit">submit</button>
       </Form>
     </Formik>
