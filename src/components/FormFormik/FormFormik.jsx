@@ -13,7 +13,10 @@ const FormFormik = () => {
     <Formik initialValues={{
       username: "",
       email: ""
-    }} onSubmit={(value) => {console.log(value)}}>
+    }} onSubmit={(value, actions) => {
+      console.log(value);
+      actions.resetForm();
+      }}>
       <Form>
         <div>
           <label htmlFor={usernameFieldId}>Name:</label>
