@@ -9,6 +9,10 @@ import FormFormik from "./components/FormFormik/FormFormik"
 
 function App() {
 
+  const handleFormSubmit = (x) => {
+    console.log(x);
+  }
+
   // const [user, setUser] = useState(null);
   // const [text, setText] = useState("qwerty")
   // const [lang, setLang] = useState("en")
@@ -20,7 +24,7 @@ function App() {
     
   return (
     <>
-      <FormFormik />
+      <FormFormik onDoHandleSubmit={handleFormSubmit}/>
     </>
 
 

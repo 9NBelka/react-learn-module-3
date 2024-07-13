@@ -3,7 +3,7 @@ import { useId } from "react"
 
   
 
-const FormFormik = () => {
+const FormFormik = ({onDoHandleSubmit}) => {
 
   const usernameFieldId = useId();
   const emailFieldId = useId();
@@ -14,7 +14,8 @@ const FormFormik = () => {
       username: "",
       email: ""
     }} onSubmit={(value, actions) => {
-      console.log(value);
+      // console.log(value);
+      onDoHandleSubmit(value);
       actions.resetForm();
       }}>
       <Form>
