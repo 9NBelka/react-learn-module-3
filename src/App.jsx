@@ -1,24 +1,31 @@
-import { useState } from "react";
-import UserForm from "./components/UserForm/UserForm"
-import TextInput from "./components/TextInput/TextInput";
-import LangSwitcher from "./components/LangSwitcher/LangSwitcher";
-import Formd from "./components/Form/Form";
-import FormClothes from "./components/FormClothes/FormClothes";
+// import { useState } from "react";
+// import UserForm from "./components/UserForm/UserForm"
+// import TextInput from "./components/TextInput/TextInput";
+// import LangSwitcher from "./components/LangSwitcher/LangSwitcher";
+// import Formd from "./components/Form/Form";
+// import FormClothes from "./components/FormClothes/FormClothes";
+
+import FormFormik from "./components/FormFormik/FormFormik"
 
 function App() {
 
-  const [user, setUser] = useState(null);
-  const [text, setText] = useState("qwerty")
-  const [lang, setLang] = useState("en")
+  // const [user, setUser] = useState(null);
+  // const [text, setText] = useState("qwerty")
+  // const [lang, setLang] = useState("en")
 
-  const saveUsername = (user) => {
-      console.log(user);
-      setUser(user);
-  }
+  // const saveUsername = (user) => {
+  //     console.log(user);
+  //     setUser(user);
+  // }
     
   return (
     <>
-      <h2>НЕКонтролируемая форма:</h2>
+      <FormFormik />
+    </>
+
+
+
+/*{ <h2>НЕКонтролируемая форма:</h2>
       {user && 
       <div>
         <p>{user.username}</p>
@@ -46,8 +53,7 @@ function App() {
 
       <hr />
 
-      <FormClothes />
-    </>
+      <FormClothes /> }*/
   )
 }
 
